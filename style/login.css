@@ -1,0 +1,371 @@
+
+html{
+    scroll-behavior: smooth;
+    animation-duration: 10s;
+   overflow-y: hidden;
+    overflow-x: hidden;
+ color: wheat;
+
+}
+*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;  
+    
+
+}
+
+h3{
+    font-size: 2.2rem;
+}
+
+p{
+    font-size:1rem ;
+}
+
+main .page{
+    width: 100%;
+}
+
+main .sign{
+    height: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex; 
+
+}
+
+main .sign .left, main .log .left{
+    align-items: center;
+    padding-left: 10rem;
+}
+
+main .sign .left .content, main .log .left .content{
+    padding-left: 2rem;
+
+}
+
+
+main .sign .left .logo, main .log .left .logo{
+margin-bottom: 6rem;
+margin-top: 4rem;
+
+}
+main .sign .left .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
+main .log .left .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+
+main .sign .left .col .btn{
+    margin: 1rem 0;
+    width: 50%;
+    padding: .8rem;
+    border: none;
+    border-radius: 2rem;
+    margin: .4rem 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    text-decoration: none;
+
+}
+
+main .log .left .col .btn{
+    margin: 1rem 0;
+    width: 50%;
+    padding: .8rem;
+    border: none;
+    border-radius: 2rem;
+    margin: .4rem 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    text-decoration: none;
+
+}
+main .sign .left .col .btn:hover{
+    opacity: 1;
+}
+.fb {
+    background-color: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background-color: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background-color: #dd4b39;
+    color: white;
+  }
+main .sign .left .content .name{
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translate(-50%);
+  
+}
+
+main .slide .sign .left .content .icon {
+    position: absolute;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top:1rem ;
+    bottom: 1%;
+    font-size: 2rem;
+    color: black;
+}
+
+
+
+
+main  .log .left .content .name-2{
+    position: absolute;
+    bottom:8% ;
+left: 50%;
+transform: translateX(-50%);
+
+  
+}
+
+main .log .left .content .icon-2{
+    position: absolute;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top:1rem ;
+    bottom: 1%;
+    font-size: 2rem;
+    color: black;
+}
+
+
+
+
+main .log{
+    position: relative;
+    /* margin-top: 100vh; */
+    height: 0;
+    min-height: 100vh;
+   
+}
+
+main .slide{
+background-color: black;
+   
+}
+ main .slide .sign{
+display: grid;
+grid-template-columns: 50% 50%;
+} 
+main .slide .log{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+    } 
+
+main .slide .right{
+padding: 2rem;
+}
+
+main .slide .right .box{
+height: 60vh;
+width: 40%;
+background-color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.list{
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%,-50%);
+    background: white;
+    text-align: center;
+    opacity: .8;
+}
+.list h1{
+color:black;
+text-transform: uppercase;
+font-weight: 500;
+font-family: var(--sofia);
+}
+
+
+
+.list input[type = "text"],.list input[type = "password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid orange;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.list input[type="text"]:hover,.list input[type="password"]:hover {
+    width: 280px;
+    border-color: orangered;
+}
+.list input[type = "submit"]{
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid orangered;
+        padding: 14px 60px;
+        width: 200px;
+        outline: none;
+        color: black;
+        border-radius: 24px;
+        transition: 0.25s;
+        cursor: pointer;
+}
+
+.list input[type = "submit"]:hover{
+    background-color: orangered;
+    color: black;
+    font-size: 1rem;
+}
+#c1{
+    color: white;
+}
+
+
+
+button{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid orangered;
+    padding: 14px 60px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+
+button:hover{
+    background-color: orangered;
+    color: black;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:768px){
+
+    main .sign .left .logo, main .log .left .logo{
+        margin-bottom: 0rem;
+        
+        }
+        
+
+        main .sign .left, main .log .left{
+            align-items: center;
+            padding-left: 1rem;
+        }
+        
+
+        
+main .sign{
+    flex-direction: column;
+}
+
+
+
+h3{
+    display: none;
+}
+p {
+    display: none;
+}
+
+
+.list {
+   
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    text-align: center;
+    opacity: .8;
+}
+
+main .sign .left .logo, main .log .left .logo {
+   
+    margin-top: 1rem;
+}
+main .sign .left .logo img, main .log .left .logo img {
+width: 100%;
+}
+
+    }

@@ -1,0 +1,1329 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --first-color: red;
+  --first-color-alt: red;
+  --title-color: white;
+  --text-color: white;
+  --text-color-light: #A6A6A6;
+  --body-color: black;
+  --container-color: #FFFFFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes ==========*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px){
+  :root{
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*========== BASE ==========*/
+*,::before,::after{
+  box-sizing: border-box;
+  outline: none;
+ 
+  
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/*========== Variables Dark theme ==========*/
+body.dark-theme{
+ 
+  --title-color: #F1F3F2;
+  --text-color: #C7D1CC;
+  --body-color: black;   /* #1D2521 */
+
+  --container-color: #27302C;
+}
+
+/*========== Button Dark/Light ==========*/
+.change-theme{
+  position: absolute;
+  right: 1rem;
+  top: 1.8rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+body{
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  
+}
+
+h1,h2,h3,p,ul{
+  margin: 0;
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+p{
+  font-size: var(--h3-font-size);
+  font-family:var(--body-font);
+  color: var(--text-color);
+}
+
+button.btn{
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: var(--Livvic);
+  cursor: pointer;
+  color: var(--body-color);
+  background-color: var(--first-color);
+  transition: .5s ease-in;
+}
+
+button.btn:hover{
+color: var(--first-color);
+background-color:white;
+border: 1px solid var(--first-color);
+}
+/*========== CLASS CSS ==========*/
+
+
+
+/*========== LAYOUT ==========*/
+.bd-container{
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.bd-grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.l-header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+/*========== NAV ==========*/
+.nav{
+  max-width: 1024px;
+  
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px){
+  .nav__menu{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    background-color: var(--body-color);
+    transition: .4s;
+    box-shadow: 0 4px 4px rgba(0,0,0,.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: var(--z-fixed);
+  }
+  
+.nav__item{
+  margin-bottom: var(--mb-2);
+}
+
+
+
+
+}
+
+
+.nav__link, .nav__logo, .nav__toggle{
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__logo:hover{
+  color: var(--first-color);
+}
+
+.nav__link{
+  transition: .3s;
+}
+
+.nav__link:hover{
+  color: var(--first-color);
+}
+
+.nav__toggle{
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+/* Show menu */
+.show-menu{
+  top: var(--header-height);
+}
+
+/* Active menu */
+.active-link{
+  color: var(--first-color);
+}
+
+
+
+
+.here li i{
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  transition: .3s;
+}
+
+.here li i:hover{
+  color: red;
+}
+  
+.carts{
+  display: none;
+}
+  
+.carts i{
+  color: var(--text-color);
+}
+  
+
+
+
+/* --------------hero starts ---------*/
+
+
+.c{
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+main .hero{
+  height: 0;
+ 
+
+  min-height: 100vh;
+  
+}
+
+main .hero .blog-post {
+  position: relative;
+ height: 100vh;
+ width: 100vw;
+ 
+  
+}
+
+main .hero .blog-post .banner{
+position: relative;
+height: 0;
+min-height: 100vh;
+
+width: 100%;
+}
+
+main .hero .blog-post .banner1{
+  background: url('/assets/images/bg.jpg');
+background-position: center;
+background-size: 99%;
+background-repeat:no-repeat ;
+}
+
+main .hero .blog-post .banner2{
+  background: url('https://i1.wp.com/diaryofaninsanewriter.com/wp-content/uploads/2020/10/mirzapur-season-2-characters.jpg?resize=840%2C467&ssl=1');
+background-position: center;
+background-size: 99%;
+background-repeat:no-repeat ;
+}
+
+main .hero .blog-post .banner3{
+  background: url('/assets/images/bg.jpg');
+background-position: center;
+background-size: 99%;
+background-repeat:no-repeat ;
+}
+
+main .hero .blog-post .banner .contentss{
+  position: absolute;
+  width: 100%;
+  margin-left: 5rem;
+  top:20% ;
+
+}
+
+main .hero .blog-post .banner .contentss .banner-content{
+  padding-top: 4rem;
+  
+}
+
+main .hero .blog-post .banner .contentss .banner-content p{
+width: 50%;
+color: white;
+}
+
+main .hero .blog-post .banner .contentss .banner-content a{
+  color: white;
+  font-size: var(--h2-font-size);
+  margin: 4rem 1rem;
+}
+
+
+
+main .hero .blog-post .blog-title{
+  position: absolute;
+  /* justify-content: center;
+  padding-left: 5rem;
+
+  padding-top: 10rem; */
+  
+}
+main .hero .blog-post .blog-title h3{
+  font-size:var(--h2-font-size);
+}
+main .hero .blog-post .blog-title span{
+  font-size: var(--biggest-font-size);
+}
+
+/* main .hero .blog-post .blog-content{
+  
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+ 
+} */
+main .hero .blog-post .blog-content .back-3{
+  padding-top: 3rem;
+  background: url('/assets/images/vectors-2-3.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+ transition: 1s ease-out;
+ background-size: 100%;
+}
+
+main .hero .blog-post .blog-content .back-2{
+  padding-top: 3rem;
+  background: url('/assets/images/vectors-2-2.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+ transition: 1s ease-out;
+ background-size: 78%;
+}
+
+main .hero .blog-post .blog-content .back-1{
+  padding-top: 3rem;
+  background: url('/assets/images/vectors-2-1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+ transition: 1s ease-out;
+ background-size: 86%;
+ margin-top: -3rem;
+
+
+
+}
+
+main .hero .blog-post .blog-content .img-banner:hover{
+transform: scale(1.08);
+transition: 1s ease-out;
+background-size: 70%;
+}
+
+
+
+/* .-------xxxxxxxxx hero ends xxxxxxxx-------- */
+
+
+
+/*++++++++ Showcase Starts */
+main .showcase{
+margin-top: 30vh;
+  min-height: 100vh;
+
+ display: flex;
+ justify-content: space-evenly;
+}
+
+main .showcase .show{
+height: 45vh;
+width: 40%;
+position: relative;
+margin: 1rem 2rem;
+background-color:var(--body-color);
+display: flex;
+justify-content: space-evenly;
+transition: 1s ease-in-out;
+border-radius: 1rem;
+box-shadow:
+0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+0 12.5px 10px rgba(0, 0, 0, 0.06),
+0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+main .showcase .show:hover{
+  transition: .5s ease-in;
+  color:white;
+  background:  linear-gradient(to right, red, purple);
+  transform: scale(1.03);
+}
+main .showcase .show .shot{
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+main .showcase .show .shot img{
+  height: 60%;
+ position: absolute;
+ top: 15%;
+ left: 13%;
+}
+
+
+main .showcase .show .collection{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+main .showcase .show .collection h3{
+font-size: var(--h1-font-size);
+padding-bottom:1rem;
+}
+
+/*xxxxxxxxxxxxx Show case ends xxxxxxxxx */
+
+
+
+
+
+
+/* Arrivals starrt++++++++++++ */
+
+main .new-arrivals h4{
+  padding: 1rem 0rem 1rem 4.5rem;
+font-family: var(--body-font);
+font-size: var(--biggest-font-size);
+}
+
+
+main .new-arrivals .arrivals{
+ margin: 3rem 1rem;
+  
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.container {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.container .card {
+  position: relative;
+  transition: .7s ease-in-out;
+  width: 320px;
+  height: 400px;
+  background: transparent;
+  border-radius: 20px;
+  
+  overflow: hidden;
+}
+
+.container .card:hover {
+  transform: scale(1.03);
+
+}
+/* 
+.container .card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--first-color);
+  clip-path: circle(150px at 80% 20%);
+  transition: 0.5s ease-in-out;
+} */
+/* 
+.container .card:hover:before {
+  clip-path: circle(300px at 80% -20%); */
+
+/* }
+
+.container .card:after {
+  content: "Nike";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+
+} */
+/* 
+.container .card .imgBx {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  transition: .5s;
+} */
+
+/* .container .card:hover .imgBx {
+  top: 0%;
+  transform: translateY(-25%);
+
+} */
+
+.container .card .imgBx img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) ;
+  width: 270px;
+  border-radius: 2rem;
+  
+}
+
+.container .card .contentBx {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  transition: 1s;
+  z-index: 4;
+}
+
+.container .card:hover .contentBx {
+  height: 210px;
+}
+
+.container .card .contentBx h2 {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--first-color-alt);
+}
+
+.container .card .contentBx .size,
+.container .card .contentBx .color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  transition: .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container .card:hover .contentBx .size {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: .5s;
+}
+
+.container .card:hover .contentBx .color {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: .6s;
+}
+
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3 {
+  color:var(--title-color);
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.container .card .contentBx .size span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  display: inline-block;
+  color: #111;
+  background: #fff;
+  margin: 0 5px;
+  transition: .5s;
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container .card .contentBx .size span:hover {  /* other bug */
+  background: #B90000;
+}
+
+.container .card .contentBx .color span {
+  width: 20px;
+  height: 20px;
+  background: #ff0;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.container .card .contentBx .color span:nth-child(2) {
+   background: #1BBFE9;
+}
+
+.container .card .contentBx .color span:nth-child(3) {
+   background: #1B2FE9;
+}
+
+.container .card .contentBx .color span:nth-child(4) {
+   background: #080481;
+}
+
+
+/* arrivals ends */
+
+
+/* success starts */
+
+main .success{
+  position: relative;
+}
+main  .success .sky{
+  position: relative;
+  margin-top: 7rem;
+  width: 100%;
+ min-height: 70vh;
+  background-image: url('https://i1.wp.com/diaryofaninsanewriter.com/wp-content/uploads/2020/10/mirzapur-season-2-characters.jpg?resize=840%2C467&ssl=1');
+background-position: center ;
+background-attachment: fixed; 
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+main .success .sky {
+align-items: flex-end ;
+  height: 20vh;
+  width: 100%;
+display: flex;
+flex-direction:row;
+justify-content: space-evenly;
+
+
+}
+
+main .success .sky .success-counts{
+margin-bottom:-5rem;
+  width: 20%;
+  height: 40%;
+  transition: .5s ease-in-out;
+  background-color: var(--body-color);
+  justify-content: center;
+  align-items: center;
+  box-shadow: orange 0px 13px 27px -5px, orange 0px 8px 16px -8px;
+
+}
+main .success .sky .success-counts:hover{
+  transform:scale(1.04) ;
+}
+main .success .sky .success-counts .content{
+padding: 2rem;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+  padding: auto;
+  align-items: center;
+  font-size: var(--h1-font-size);
+  text-align: center;
+}
+main .success .sky .success-counts .content span{
+  font-weight: 900;
+  font-size: var(--h1-font-size);
+}
+main .success .sky .success-counts .content i{
+ position: absolute;
+ top: 0;
+ z-index: 2;
+ margin-top: -2rem;
+ color: orangered;
+ font-size: var(--biggest-font-size);
+
+
+
+ 
+}
+
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.counter-1,.counter-2,.counter-3,.counter-4  {
+  transition: --num 5s;
+  counter-reset: num var(--num);
+}
+.success:hover .counter-1 {
+  --num: 200;
+}
+.success:hover .counter-2 {
+  --num:121 ;
+}
+
+.success:hover .counter-3 {
+  --num: 98;
+}
+.success:hover .counter-4 {
+  --num: 178;
+}
+
+.counter-1::after {
+  content: counter(num);
+}
+
+.counter-2::after {
+  content: counter(num);
+}
+
+.counter-3::after {
+  content: counter(num);
+}
+
+.counter-4::after {
+  content: counter(num);
+}
+
+
+/* success xxx*/
+
+
+ 
+.ok{
+  
+  min-height: 100vh;
+  
+  
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.position-h1{
+  font-size: var(--h1-font-size);
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 81%);
+  -webkit-background-clip: text;
+  color: transparent;
+
+}
+
+
+
+
+
+
+
+
+.position-h2{
+  font-size: var(--h2-font-size);
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 81%);
+  -webkit-background-clip: text;
+  font-weight: 700;
+
+  color: transparent;
+}
+
+
+.test{
+  height: 100vh;
+  width: 100%;
+}
+
+.trigger1{
+  height: 0;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  align-items: center;
+justify-content: center; 
+
+
+  
+}
+
+.trigger1 .position-h2{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+position: absolute;
+
+padding: 0 5rem;
+}
+
+
+.mys{
+  margin-top:20vh;
+ 
+}
+
+.trigger2 {
+
+ position:relative;
+  height: 0;
+ align-items: center;
+  min-height: 205vh;
+  width: 100%;
+
+
+
+}
+
+.iphone1-text {
+  position: relative;
+  margin-right: -10rem;
+  
+}
+
+.iphone1-text p{
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 81%);
+  -webkit-background-clip: text;
+  font-weight: 700;
+  
+  color: transparent;
+
+}
+
+
+.iphone2-text {
+  
+  position: relative;
+  margin-left: -10rem;
+}
+  
+.iphone2-text p{
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 81%);
+  -webkit-background-clip: text;
+  font-weight: 700;
+  
+  color: transparent;
+
+}
+
+
+.trigger2 .iphone {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items:center;
+  justify-content: space-around;
+  
+}
+
+.image {
+   display: flex;
+   align-items: center;
+  
+} 
+
+.image .iphone1{
+  z-index: 2;
+}
+
+
+
+.image .iphone2{
+  margin-left: -14rem;
+  z-index: 1;
+}
+
+
+.test{
+  position:relative;
+  height: 50vh;
+
+}
+
+.desk{
+  position: absolute;
+  height: 100vh;
+  min-height: 100vh;
+ left: 30%;
+ margin-bottom: 100vh;
+}
+
+.desk .desk1{
+
+  z-index: 1;
+}
+
+
+.desk .desk2{
+  z-index: 23;
+  margin-top:-15rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------Footer-------------*/
+
+footer.footer{
+  height: 100%;
+  background: var(--bg-color);
+  position: relative;
+}
+
+footer.footer .container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+
+footer.footer .container .about-us{
+width: 25%;
+
+}
+
+footer .flex-row{
+  display: flex;
+
+  justify-content: space-around;
+}
+
+
+
+
+footer.footer .newsletter .form-element input{
+  padding: .5rem .7rem;
+  border: none;
+  border-bottom: 1px solid red;
+  background: transparent;
+  color: red;
+  font-family: var(--Josefin);
+  font-size: 1rem;
+  width: 74%;
+}
+
+
+footer.footer .newsletter .form-element a{
+  background: var(--sky);
+  padding: .5rem .7rem;
+  cursor:pointer;
+  color:red;
+
+}
+footer.footer .follow div i{
+  color: red;
+  padding: 0 .4rem;
+  transition: .5s ease-in-out;
+}
+
+
+footer.footer .follow div i:hover{
+  font-size: 2rem;
+}
+
+
+
+
+footer .move-up{
+  position: absolute;
+  right: 20%;
+  bottom:25%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*++++++++++++ MEdia queries */
+
+@media screen and (max-width: 768px){
+  
+  .desk{
+    display: none;
+    
+  }
+  .position-h1{
+   display: none;
+  }
+
+  button.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+    color: var(--body-color);
+    background-color: var(--first-color);
+    transition: .5s ease-in;
+  }
+
+  main .hero .blog-post .banner{
+    background-size: 350%;
+    
+  }
+  main .hero .blog-post .banner .contentss{
+    position: absolute;
+    width: 100%;
+    margin-left: 1rem;
+    padding-top: 4rem;
+    top:5%;
+  
+  }
+
+  main .hero .blog-post .banner1 {
+    margin-top: -2rem;
+}
+
+
+main .hero .blog-post .blog-content{
+  flex-direction: column-reverse;
+  padding: 0;
+  
+}
+main .hero .blog-post .blog-title{
+  padding-top: 1rem;
+}
+
+.carts {
+  position:absolute;
+  display: initial;
+  right: 15%;
+  font-size: 1.2rem;
+}
+
+main .hero .blog-post .blog-title{
+  padding-left: 1rem;
+}
+
+footer.footer .container{
+  flex-direction: column;
+}
+footer.footer .container .about-us{
+  width: 80%;
+  margin: 1rem 2rem;
+}
+footer.footer .newsletter{
+  width: 80%;
+  margin: 1rem 2rem;
+}
+footer.footer .follow{
+  width: 80%;
+  margin: 2rem;
+}
+
+ footer .rights{
+   margin: 1rem;
+ }
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 912px){
+  main .hero .blog-post .blog-content{
+    padding-top: 1rem;
+  }
+
+  main .showcase{
+   flex-direction: column;  
+   align-items: center;
+   
+  }
+  main .showcase .show{
+   
+    width: 90%;
+    margin: 1rem .5rem;  
+    height: 30vh;
+    }
+
+    main .hero{
+      margin-bottom: 3rem;
+    }
+
+    main .arrivals{
+      flex-direction: column;
+      
+    }
+
+    main .new-arrivals .arrivals .container{
+      margin: 1rem 0;
+    }
+    
+    main .success .sky{
+      flex-direction: column;
+      height: 0;
+      min-height: 150vh;
+      align-items: center;
+    }
+
+    main .success .sky .success-counts{
+      width: 60%;
+      margin: 1rem 0;
+    }
+    main .success .sky .success-counts .content i{
+      margin: -1rem;
+      font-size: 2rem;
+    }
+
+
+    .trigger1 .position-h2{
+      padding: 0;
+      top: 0;
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width : 768px){
+  body{
+    margin: 0;
+    
+  }
+
+  .nav{
+    padding-top: 1rem;
+    
+  }
+  .nav .nav__logo{
+    font-size: 1.4rem;
+  }
+  .nav__list{
+    display: flex;
+    
+    
+    
+  }
+  .nav__item{
+    margin-left: var(--mb-5);
+    margin-bottom: 0;
+  }
+  .nav__toggle{
+    display: none;
+  }
+
+  .change-theme{
+    position: initial;
+    margin-left: var(--mb-2);
+  }
+
+ 
+  main .hero .blog-post .blog-content .img-banner{
+    padding-top:8rem;
+  } 
+
+}
+
+
+
+
+
+@media screen and (min-width: 960px){
+  .bd-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main .hero .blog-post .blog-title span{
+    font-size: 8rem;
+    font-weight: 900;
+  }
+  main .showcase{
+    margin-top: 15rem;
+     
+  }
+}
+
+/* For tall screens on mobiles y desktop*/
+@media screen and (min-height: 721px) {
+ 
+}
